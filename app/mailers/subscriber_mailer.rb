@@ -4,6 +4,6 @@ class SubscriberMailer < ActionMailer::Base
     @subscriber = subscriber
 
     mail from: subscriber.email
-    mail to: "nrobertbernard@gmail.com", subject: "New Subscriber"
+    mail to: "pushboardportland@gmail.com", subject: "New Subscriber"
   end
 end
