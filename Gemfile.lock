@@ -50,6 +50,9 @@ GEM
     coffee-script-source (1.8.0)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     execjs (2.2.2)
     hike (1.2.3)
@@ -67,6 +70,7 @@ GEM
     mime-types (2.4.3)
     minitest (5.4.3)
     multi_json (1.10.1)
+    netrc (0.8.0)
     pg (0.17.1)
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
@@ -94,6 +98,9 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rspec-core (3.1.5)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -147,12 +154,14 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 3.3.1)
   coffee-rails
+  dotenv-rails
   jquery-rails
   letter_opener
   pg
   quiet_assets
   rails
   rails_12factor
+  rest-client
   rspec-rails
   sass-rails
   shoulda-matchers
