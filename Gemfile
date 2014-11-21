@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 gem 'rest-client'
+gem 'pry'
 
 group :development do
   gem 'better_errors'

@@ -6,6 +6,8 @@ class Subscriber < ActiveRecord::Base
 
   after_create :send_subscriber_email
 
+private
+
   def send_subscriber_email
     SubscriberMailer.new_subscriber(self).deliver
   end
