@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 gem 'rest-client'
 gem 'pry'
+gem 'bootstrap_form'
 
 group :development do
   gem 'better_errors'

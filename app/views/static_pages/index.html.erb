@@ -1,13 +1,7 @@
-<div class="new-subscriber">
-  <%= form_for @subscriber, html: {class: "form", id: "new-subscriber"}, remote: true do |f| %>
-    <div class="form-group">
-      <%= f.label "Email" %>
-      <%= f.email_field :email, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label "Name" %>
-      <%= f.text_field :name, label: "Name", class: "form-control" %>
-    </div>
-    <%= f.submit "Subscribe", class: "btn btn-default btn-block" %>
-  <% end %>
-</div>
+<h2>INSTANTLY SUBSCRIBE TO OUR MAILING LIST HERE:</h2>
+<%= render "subscriber_form" %>
+
+<h2>ADD AN EVENT TO A FUTURE PUSHBOARD NEWSLETTER:</h2>
+<em>[Event must be in the Portland, Oregon metro area]</em>
+<p>Newsletter sent out Mondays, be sure to submit your event on/before the Friday prior to the week it is scheduled for!</p>
+<%= render "event_form" %>

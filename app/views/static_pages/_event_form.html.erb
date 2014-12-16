@@ -1,0 +1,21 @@
+<div class="new-event">
+  <%= bootstrap_form_for(@event, layout: :horizontal, label_col: "col-sm-5", control_col: "col-sm-7") do |f| %>
+    <%= f.text_field :title, label: "Title of Event" %>
+    <%= f.date_field :date, label: "Date of Event" %>
+    <%= f.time_select :time, label: "Event Start Time" %>
+    <%= f.text_field :location, label: "Where is the Event" %>
+    <%= f.form_group :age, label: { text: "All Ages?" } do %>
+      <%= f.radio_button :age, 0, label: "Show is All Ages", checked: true %>
+      <%= f.radio_button :age, 1, label: "Show is 21+" %>
+    <% end %>
+    <%= f.text_field :cost, label: "Cost of Event", prepend: "$" %>
+    <%= f.email_field :email, label: "E-mail Address Contact" %>
+    <%= f.text_field :name, label: "Contact Name" %>
+    <%= f.url_field :link, label: "Links to Artists or Event" %>
+    <%= f.text_field :genre, label: "Genre of Event" %>
+    <%= f.form_group do %>
+      <%= f.submit "Add My Event to the Newsletter", class: "btn btn-block" %>
+    <% end %>
+  <% end %>
+</div>
+

@@ -15,3 +15,7 @@ img {
 .site-header {
   padding-bottom: 1em;
 }
+
+label.required:after {
+  content:" *";
+}

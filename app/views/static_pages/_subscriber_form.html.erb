@@ -1,0 +1,13 @@
+<div class="new-subscriber">
+  <%= form_for @subscriber, html: {class: "form", id: "new-subscriber"}, remote: true do |f| %>
+    <div class="form-group">
+      <%= f.label "Email" %>
+      <%= f.email_field :email, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Name" %>
+      <%= f.text_field :name, label: "Name", class: "form-control" %>
+    </div>
+    <%= f.submit "Subscribe", class: "btn btn-default btn-block" %>
+  <% end %>
+</div>
