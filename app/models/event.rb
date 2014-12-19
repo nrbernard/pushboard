@@ -9,7 +9,7 @@ class Event < ActiveRecord::Base
   validates :email, format: { :with => /@/ }
   validates :name, presence: true
 
-  # after_create :send_event_email
+  after_create :send_event_email if Rails.env.production?
 
 private
 
