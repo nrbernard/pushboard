@@ -3,11 +3,6 @@
   padding-top: 5%;
 }
 
-.form-container {
-  max-width: 30em;
-  margin: 0 auto;
-}
-
 img {
   width: 100%;
   height: auto;
@@ -24,4 +19,8 @@ label.required:after {
 
 .form {
   padding: 0 0 2em 0;
+}
+
+.alert {
+  text-align: center;
 }
