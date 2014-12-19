@@ -1,9 +1,10 @@
 .container {
-  max-width: 40em;
-  padding-top: 10%;
+  max-width: 50em;
+  padding-top: 5%;
 }
-.subscribe-form {
-  max-width: 25em;
+
+.form-container {
+  max-width: 30em;
   margin: 0 auto;
 }
 
@@ -18,4 +19,9 @@ img {
 
 label.required:after {
   content:" *";
+  color: red;
+}
+
+.form {
+  padding: 0 0 2em 0;
 }

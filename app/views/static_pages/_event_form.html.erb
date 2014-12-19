@@ -1,5 +1,5 @@
-<div class="new-event">
-  <%= bootstrap_form_for(@event, layout: :horizontal, label_col: "col-sm-5", control_col: "col-sm-7") do |f| %>
+<div class="form-container">
+  <%= bootstrap_form_for(@event, layout: :horizontal, label_col: "col-sm-4", control_col: "col-sm-8") do |f| %>
     <%= f.text_field :title, label: "Title of Event" %>
     <%= f.date_field :date, label: "Date of Event" %>
     <%= f.time_select :time, label: "Event Start Time" %>
