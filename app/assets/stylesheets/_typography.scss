@@ -1,4 +1,17 @@
+$black: #222;
+
 h2 {
   text-transform: uppercase;
   padding: 0 0 .5em 0;
+  text-align: center;
+}
+
+body {
+  font-family: "Courier", monospace, sans-serif;
+  color: $black
+}
+
+.highlight {
+  color: white;
+  background-color: $black
 }

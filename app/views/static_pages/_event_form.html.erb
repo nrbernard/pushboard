@@ -1,5 +1,5 @@
 <div class="form-container">
-  <%= bootstrap_form_for(@event, layout: :horizontal, label_col: "col-sm-4", control_col: "col-sm-8") do |f| %>
+  <%= bootstrap_form_for(@event, layout: :horizontal, label_col: "col-sm-5", control_col: "col-sm-7") do |f| %>
     <%= f.text_field :title, label: "Title of Event" %>
     <%= f.date_field :date, label: "Date of Event" %>
     <%= f.time_select :time, label: "Event Start Time" %>
@@ -13,7 +13,7 @@
     <%= f.text_field :name, label: "Contact Name" %>
     <%= f.url_field :link, label: "Links to Artists or Event" %>
     <%= f.text_field :genre, label: "Genre of Event" %>
-    <%= f.submit "Add My Event to the Newsletter", class: "btn btn-primary btn-block" %>
+    <%= f.submit "Add My Event to the Newsletter", class: "btn btn-default btn-block" %>
   <% end %>
 </div>
 

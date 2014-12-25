@@ -10,3 +10,8 @@
 .new-event > div {
   max-width: 40em;
 }
+
+label.required:after {
+  content:" *";
+  color: red;
+}
