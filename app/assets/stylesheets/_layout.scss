@@ -26,13 +26,20 @@ label.required:after {
 }
 
 footer p {
+  text-align: center;
   font-size: .9em;
 }
 
-.copyright {
-  float: left;
-}
+@media (min-width: 384px) {
+  footer p {
+    text-align: left;
+  }
 
-.colophon {
-  float: right;
+  .copyright {
+    float: left;
+  }
+
+  .colophon {
+    float: right;
+  }
 }
