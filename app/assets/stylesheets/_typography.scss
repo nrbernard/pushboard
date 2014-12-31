@@ -11,8 +11,25 @@ body {
   color: $black
 }
 
-.highlight {
+footer {
+  padding-top: 2em;
+}
+
+a, .highlight {
   color: white;
   background-color: $black;
-  padding: .25em 0;
+  padding: .25em;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    color: red;
+    background-color: white;
+    text-decoration: none;
+  }
+}
+
+a.header-link {
+    background-color: white;
 }

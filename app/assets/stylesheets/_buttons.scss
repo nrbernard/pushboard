@@ -3,4 +3,8 @@ $black: #222;
 .btn-default {
   color: white;
   background-color: $black;
+  &:hover {
+    color: red;
+    background-color: white;
+  }
 }
