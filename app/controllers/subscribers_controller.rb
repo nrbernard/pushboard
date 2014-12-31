@@ -11,7 +11,8 @@ class SubscribersController < ApplicationController
   def create
     @subscriber = Subscriber.new(subscriber_params)
     if @subscriber.save
-      redirect_to static_pages_path, :notice => "Thanks for subscribing!"
+      flash[:success] = "Thanks for subscribing!"
+      redirect_to root_path
     else
       render "new"
     end

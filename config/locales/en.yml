@@ -21,3 +21,16 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      subscriber:
+        email: "E-mail address"
+    errors:
+      models:
+        subscriber:
+          attributes:
+            email:
+              blank: "Please give us a valid email address."
+              taken: "Looks like this email address is already subscribed! Are you sure it's correct?"
+            name:
+              blank: "Tell us what to call you."

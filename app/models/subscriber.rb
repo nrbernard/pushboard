@@ -1,8 +1,7 @@
 class Subscriber < ActiveRecord::Base
   validates_presence_of :email
-  validates_format_of :email, :with => /@/
-  validates_presence_of :name
   validates_uniqueness_of :email
+  validates_presence_of :name
 
   after_create :send_subscriber_email if Rails.env.production?
 
