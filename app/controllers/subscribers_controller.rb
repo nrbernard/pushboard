@@ -4,15 +4,19 @@ class SubscribersController < ApplicationController
     @subscribers = Subscriber.all
   end
 
+  def new
+    @subscriber = Subscriber.new
+  end
+
   def create
     @subscriber = Subscriber.new(subscriber_params)
     if @subscriber.save
-      respond_to do |format|
-        format.html { redirect_to static_pages_path }
-        format.js
-      end
+      redirect_to static_pages_path, :notice => "Thanks for subscribing!"
+    else
+      render "new"
     end
   end
+
 
 private
 
