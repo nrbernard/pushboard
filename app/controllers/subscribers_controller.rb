@@ -18,7 +18,6 @@ class SubscribersController < ApplicationController
     end
   end
 
-
 private
 
   def subscriber_params

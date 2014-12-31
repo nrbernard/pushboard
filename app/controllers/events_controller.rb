@@ -4,13 +4,17 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def new
+    @event = Event.new
+  end
+
   def create
     @event = Event.new(event_params)
     if @event.save
-      respond_to do |format|
-        format.html { redirect_to static_pages_path }
-        format.js
-      end
+      flash[:success] = "Thanks for submitting your event! Feel free to submit another"
+      redirect_to root_path
+    else
+      render "new"
     end
   end
 

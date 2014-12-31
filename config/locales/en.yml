@@ -34,3 +34,21 @@ en:
               taken: "Looks like this email address is already subscribed! Are you sure it's correct?"
             name:
               blank: "Tell us what to call you."
+        event:
+          attributes:
+            title:
+              blank: "What's the name of the event?"
+            date:
+              blank: "What's the date of the event?"
+            time:
+              blank: "What time is the event?"
+            location:
+              blank: "Where is the event?"
+            age:
+              blank: "Is the event all ages?"
+            cost:
+              blank: "How much does the event cost?"
+            email:
+              blank: "Who should people email with questions?"
+            name:
+              blank: "Who should people email with questions?"
