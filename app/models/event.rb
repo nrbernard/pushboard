@@ -18,14 +18,16 @@ private
       :from => "#{email}",
       :to => "pushboardportland@gmail.com",
       :subject => "New Event",
-      :text => "Title: #{title}\n" +
-               "Date: #{date}\n" +
-               "Time: #{time}\n" +
+      :text => "Date: #{date.strftime("%A, %B %e")}\n\n\n" +
+               "Title: #{title}\n" +
+               "Time: #{time.strftime("%l:%M %p")}\n" +
                "Location: #{location}\n" +
                "All Ages?: #{age ? 'Yes' : 'No'}\n" +
                "Cost: $#{cost}\n" +
-               "Contact Email: #{name}\n" +
-               "Contact Name: #{name}\n"
+               "Contact Email: #{email}\n" +
+               "Contact Name: #{name}\n" +
+               "Links: #{link}\n" +
+               "Genre Name: #{genre}\n"
     else
       EventMailer.new_event(self).deliver
     end

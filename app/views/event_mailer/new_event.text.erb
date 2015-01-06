@@ -1,2 +1,11 @@
+Date: <%= @event.date.strftime("%A, %B %e") %>
+
 Title: <%= @event.title %>
-Date: <%= @event.date %>
+Time: <%= @event.time.strftime("%l:%M %p") %>
+Location: <%= @event.location %>
+All Ages?: <%= @event.age ? "Yes" : "No" %>
+Cost: $<%= @event.cost %>
+Contact Email: <%= @event.email %>
+Contact Name: <%= @event.name %>
+Links: <%= @event.link %>
+Genre: <%= @event.genre %>
