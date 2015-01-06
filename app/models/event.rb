@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
   validates :date, presence: true
   validates :time, presence: true
   validates :location, presence: true
-  validates :age, presence: true
+  validates :age, :inclusion => { :in => [true, false] }
   validates :cost, presence: true
   validates :email, presence: true
   validates :name, presence: true
@@ -22,8 +22,8 @@ private
                "Date: #{date}\n" +
                "Time: #{time}\n" +
                "Location: #{location}\n" +
-               "21+?: #{age}\n" +
-               "Cost: #{name}\n" +
+               "All Ages?: #{age ? 'Yes' : 'No'}\n" +
+               "Cost: $#{cost}\n" +
                "Contact Email: #{name}\n" +
                "Contact Name: #{name}\n"
     else

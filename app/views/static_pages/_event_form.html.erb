@@ -4,9 +4,9 @@
     <%= f.date_field :date, value: Time.now.strftime("%Y-%m-%d"), label: "Date of Event" %>
     <%= f.time_field :time, value: "21:00", label: "Event Start Time" %>
     <%= f.text_field :location, label: "Where is the Event" %>
-    <%= f.form_group :age, value: true, label: { text: "All Ages?" } do %>
-      <%= f.radio_button :age, 0, label: "Event is All Ages" %>
-      <%= f.radio_button :age, 1, label: "Event is 21+", checked: true %>
+    <%= f.form_group :age, value: true, label: { text: "All Ages?", class: "required" } do %>
+      <%= f.radio_button :age, true, label: "Event is All Ages", checked: true %>
+      <%= f.radio_button :age, false, label: "Event is 21+" %>
     <% end %>
     <%= f.text_field :cost, label: "Cost of Event", prepend: "$" %>
     <%= f.email_field :email, label: "Contact Email Address" %>

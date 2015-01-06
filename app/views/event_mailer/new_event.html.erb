@@ -4,7 +4,17 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <p>Title: <%= @event.title %></p>
-    <p>Date: <%= @event.date %></p>
+    <ul>
+      <li>Title: <%= @event.title %></li>
+      <li>Date: <%= @event.date %></li>
+      <li>Time: <%= @event.time %></li>
+      <li>Location: <%= @event.location %></li>
+      <li>All Ages?: <%= @event.age ? "Yes" : "No" %></li>
+      <li>Cost: $<%= @event.cost %></li>
+      <li>Contact Email: <%= @event.email %></li>
+      <li>Contact Name: <%= @event.name %></li>
+      <li>Links: <%= @event.link %></li>
+      <li>Genre: <%= @event.genre %></li>
+    </ul>
   </body>
 </html>
