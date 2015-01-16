@@ -19,6 +19,14 @@ class SubscribersController < ApplicationController
     end
   end
 
+  def destroy
+    @subscriber = Subscriber.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to subscribers_path }
+      format.js
+    end
+  end
+
 private
 
   def subscriber_params

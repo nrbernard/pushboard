@@ -1,4 +1,9 @@
 <tr>
   <td><%= subscriber.name %></td>
   <td><%= subscriber.email %></td>
+  <td>
+    <%= link_to "/subscribers/#{subscriber.id}", method: :delete, data: {confirm: "Are you sure?"}, class: "delete", remote: true do %>
+      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    <% end %>
+  </td>
 </tr>
