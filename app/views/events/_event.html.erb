@@ -1,6 +1,49 @@
 <tr>
-  <td><%= event.title %></td>
-  <td><%= event.date %></td>
+  <td class="title"><strong><%= event.title %><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></strong>
+    <table class="details">
+      <tr>
+        <td>Date:</td>
+        <td><%= event.date.strftime("%A, %B %e") %></td>
+      </tr>
+      <tr>
+        <td>Time:</td>
+        <td><%= event.time.strftime("%l:%M %p") %></td>
+      </tr>
+      <tr>
+        <td>Location:</td>
+        <td><%= event.location %></td>
+      </tr>
+      <tr>
+        <td>All Ages?</td>
+        <td><%= event.age ? 'Yes' : 'No' %></td>
+      </tr>
+      <tr>
+        <td>Cost:</td>
+        <td><%= event.cost %></td>
+      </tr>
+      <tr>
+        <td>Contact Email:</td>
+        <td><%= event.email %></td>
+      </tr>
+      <tr>
+        <td>Contact Name:</td>
+        <td><%= event.email %></td>
+      </tr>
+      <% if event.link %>
+      <tr>
+        <td>Links:</td>
+        <td><%= event.link %></td>
+      </tr>
+      <% end %>
+      <% if event.link %>
+      <tr>
+        <td>Genre:</td>
+        <td><%= event.genre %></td>
+      </tr>
+      <% end %>
+    </table>
+  </td>
+  <td><%= event.created_at.strftime("%B %e, %Y") %></td>
   <td>
     <%= link_to "/events/#{event.id}", method: :delete, data: {confirm: "Are you sure?"}, class: "delete", remote: true do %>
       <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
