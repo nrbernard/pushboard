@@ -19,6 +19,14 @@ class EventsController < ApplicationController
     end
   end
 
+  def destroy
+    @event = Event.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to events_path }
+      format.js
+    end
+  end
+
 private
 
   def event_params
