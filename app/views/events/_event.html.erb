@@ -27,15 +27,15 @@
       </tr>
       <tr>
         <td>Contact Name:</td>
-        <td><%= event.email %></td>
+        <td><%= mail_to event.email %></td>
       </tr>
-      <% if event.link %>
+      <% if event.link.present? %>
       <tr>
         <td>Links:</td>
-        <td><%= event.link %></td>
+        <td><%= link_to event.link, event.link.include?("http://") ? "#{event.link}" : "http://#{event.link}" %></td>
       </tr>
       <% end %>
-      <% if event.link %>
+      <% if event.genre.present? %>
       <tr>
         <td>Genre:</td>
         <td><%= event.genre %></td>
