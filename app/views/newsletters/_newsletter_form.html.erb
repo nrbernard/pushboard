@@ -1,0 +1,15 @@
+<div class="form-container">
+  <%= bootstrap_form_for(@newsletter, layout: :horizontal, label_col: "col-sm-5", control_col: "col-sm-7") do |f| %>
+    <%= f.date_field :start_date, value: Time.now.strftime("%Y-%m-%d"), label: "Start of Week" %>
+    <%= f.date_field :end_date, value: Time.now.strftime("%Y-%m-%d"), label: "End of Week" %>
+
+    <%= f.form_group :events, label: { text: "Events", class: "required" } do %>
+      <% @events.each do |event| %>
+        <%= f.check_box :events, label: "#{event.title}" %>
+      <% end %>
+    <% end %>
+
+    <%= f.submit "Create Newsletter", class: "btn btn-default btn-block" %>
+  <% end %>
+</div>
+

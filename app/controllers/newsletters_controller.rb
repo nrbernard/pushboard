@@ -3,12 +3,14 @@ class NewslettersController < ApplicationController
 
   def index
     @newsletters = Newsletter.all
+    @newsletter = Newsletter.new
+    @events = Event.all
   end
 
 private
 
   def newsletter_params
-    params.require(:newsletter).permit(:name)
+    params.require(:newsletter).permit(:start_date, :end_date, :events)
   end
 
 end
