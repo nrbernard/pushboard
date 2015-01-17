@@ -8,6 +8,8 @@ class Event < ActiveRecord::Base
   validates :email, presence: true
   validates :name, presence: true
 
+  belongs_to :newsletter
+
   after_create :send_event_email
 
 private

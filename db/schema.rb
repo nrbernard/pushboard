@@ -11,29 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141130051607) do
+ActiveRecord::Schema.define(version: 20150117003611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "events", force: true do |t|
-    t.string   "title"
+  create_table "events", force: :cascade do |t|
+    t.string   "title",         limit: 255
     t.date     "date"
     t.time     "time"
-    t.string   "location"
+    t.string   "location",      limit: 255
     t.boolean  "age"
-    t.string   "cost"
-    t.string   "email"
-    t.string   "name"
-    t.string   "link"
-    t.string   "genre"
+    t.string   "cost",          limit: 255
+    t.string   "email",         limit: 255
+    t.string   "name",          limit: 255
+    t.string   "link",          limit: 255
+    t.string   "genre",         limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "event_id"
+    t.integer  "newsletter_id"
+  end
+
+  create_table "newsletters", force: :cascade do |t|
+    t.date     "date"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "subscribers", force: true do |t|
-    t.string   "email"
-    t.string   "name"
+  create_table "subscribers", force: :cascade do |t|
+    t.string   "email",      limit: 255
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
