@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :subscribers
   resources :events
+  resources :newsletters
 end
