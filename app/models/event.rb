@@ -29,7 +29,7 @@ private
                "Contact Email: #{email}\n" +
                "Contact Name: #{name}\n" +
                "Links: #{link}\n" +
-               "Genre Name: #{genre}\n"
+               "Description: #{description}\n"
     else
       EventMailer.new_event(self).deliver
     end

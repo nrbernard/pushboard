@@ -35,10 +35,10 @@
         <td><%= link_to event.link, event.link.include?("http://") ? "#{event.link}" : "http://#{event.link}" %></td>
       </tr>
       <% end %>
-      <% if event.genre.present? %>
+      <% if event.description.present? %>
       <tr>
         <td>Genre:</td>
-        <td><%= event.genre %></td>
+        <td><%= event.description %></td>
       </tr>
       <% end %>
       <tr>
