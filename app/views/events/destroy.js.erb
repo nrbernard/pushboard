@@ -1,1 +1,1 @@
-$('a[href="/events/<%= @event.id %>"]').closest('tr').remove();
+$('a[href="/events/<%= @event.id %>"]').closest("table").closest("tr").remove();
