@@ -12,6 +12,8 @@ class Event < ActiveRecord::Base
 
   after_create :send_event_email
 
+  default_scope { order('created_at') }
+
 private
 
   def send_event_email

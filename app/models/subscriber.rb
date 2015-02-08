@@ -5,6 +5,8 @@ class Subscriber < ActiveRecord::Base
 
   after_create :send_subscriber_email
 
+  default_scope { order('created_at') }
+
 private
 
   def send_subscriber_email
