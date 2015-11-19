@@ -1,7 +1,13 @@
 <div class="form-container">
-  <%= bootstrap_form_for @subscriber, layout: :horizontal, label_col: "col-sm-3", control_col: "col-sm-9", html: {class: "form", id: "new-subscriber"} do |f| %>
-    <%= f.email_field :email, label: "Email" %>
-    <%= f.text_field :name, label: "Name" %>
-    <%= f.submit "Subscribe", class: "btn btn-default btn-block" %>
-  <% end %>
+  <form class="form form-horizontal" action="https://tinyletter.com/pushboard" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/pushboard', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    <input type="hidden" value="1" name="embed"/>
+    <div class="form-group">
+      <label for="tlemail" class="control-label col-sm-3 required">Email</label>
+      <div class="col-sm-9">
+        <input type="text" name="email" id="tlemail" class="form-control">
+      </div>
+    </div>
+
+    <input type="submit" value="Subscribe" class="btn btn-default btn-block">
+  </form>
 </div>

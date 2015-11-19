@@ -17,16 +17,16 @@ ActiveRecord::Schema.define(version: 20150208203732) do
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.string   "title",         limit: 255
+    t.string   "title"
     t.date     "date"
     t.time     "time"
-    t.string   "location",      limit: 255
+    t.string   "location"
     t.boolean  "age"
-    t.string   "cost",          limit: 255
-    t.string   "email",         limit: 255
-    t.string   "name",          limit: 255
-    t.string   "link",          limit: 255
-    t.string   "description",   limit: 255
+    t.string   "cost"
+    t.string   "email"
+    t.string   "name"
+    t.string   "link"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "event_id"
@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 20150208203732) do
   end
 
   create_table "subscribers", force: :cascade do |t|
-    t.string   "email",      limit: 255
-    t.string   "name",       limit: 255
+    t.string   "email"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
