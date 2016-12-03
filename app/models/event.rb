@@ -18,7 +18,7 @@ private
 
   def send_event_email
     if Rails.env.production?
-      RestClient.post "https://api:#{ENV['MAILGUN_API_KEY']}@api.mailgun.net/v2/sandbox8996eb7a622440389f7706e641323fe9.mailgun.org/messages",
+      RestClient.post "https://api:#{ENV['MAILGUN_API_KEY']}@#{ENV['MAILGUN_API_BASE_URL']}/messages",
       :from => "#{email}",
       :to => "pushboardportland@gmail.com",
       :subject => "New Event",
